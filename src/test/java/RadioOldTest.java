@@ -4,20 +4,20 @@ import ru.netology.Radio;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
-public class RadioTest {
+public class RadioOldTest {
 
 
 
-    Radio rad1 = new Radio(5);
+    Radio rad = new Radio();
 
     @Test
     void radioTestNext() {
 
-        rad1.setChoiceStation(3);
-        rad1.stationNext();
+        rad.setChoiceStation(3);
+        rad.stationNext();
 
         int expected = 4;
-        int actual = rad1.getRadioStation();
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
@@ -25,96 +25,96 @@ public class RadioTest {
     void radioTestNextMax() {
 
 
-        rad1.setChoiceStation(5);
+        rad.setChoiceStation(10);
 
-        rad1.stationNext();
+        rad.stationNext();
 
         int expected = 0;
-        int actual = rad1.getRadioStation();
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void radioTestPrev() {
 
-        rad1.setChoiceStation(5);
+        rad.setChoiceStation(5);
 
-        rad1.stationPrev();
+        rad.stationPrev();
 
         int expected = 4;
-        int actual = rad1.getRadioStation();
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void radioTestPrevMin() {
 
-        rad1.setChoiceStation(0);
+        rad.setChoiceStation(0);
 
-        rad1.stationPrev();
+        rad.stationPrev();
 
-        int expected = 5;
-        int actual = rad1.getRadioStation();
+        int expected = 10;
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void radioTestChoice() {
 
-        rad1.setChoiceStation(5);
+        rad.setChoiceStation(5);
 
 
         int expected = 5;
-        int actual = rad1.getRadioStation();
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void radioTestChoiceMin() {
-        rad1.setChoiceStation(-1);
+        rad.setChoiceStation(-1);
 
         int expected = 0;
-        int actual = rad1.getRadioStation();
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void radioTestChoiceMax() {
 
-        rad1.setChoiceStation(5);
+        rad.setChoiceStation(10);
 
-        int expected = 0;
-        int actual = rad1.getRadioStation();
+        int expected = 10;
+        int actual = rad.getRadioStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestChoice() {
 
-        rad1.setVolume(5);
+        rad.setVolume(5);
 
 
         int expected = 5;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestChoiceMin() {
-        rad1.setVolume(-1);
+        rad.setVolume(-1);
 
         int expected = 0;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestChoiceMax() {
 
-        rad1.setVolume(101);
+        rad.setVolume(101);
 
         int expected = 0;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
@@ -122,48 +122,48 @@ public class RadioTest {
 
     @Test
     void volumeTestPlus() {
-        rad1.setVolume(5);
+        rad.setVolume(5);
 
-        rad1.volumePlus();
+        rad.volumePlus();
 
         int expected = 6;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestPlusMax() {
 
-        rad1.setVolume(100);
+        rad.setVolume(100);
 
-        rad1.volumePlus();
+        rad.volumePlus();
 
         int expected = 100;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestMinus() {
 
-        rad1.setVolume(5);
+        rad.setVolume(5);
 
-        rad1.volumeMinus();
+        rad.volumeMinus();
 
         int expected = 4;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void volumeTestMinusMin() {
 
-        rad1.setVolume(0);
+        rad.setVolume(0);
 
-        rad1.volumeMinus();
+        rad.volumeMinus();
 
         int expected = 0;
-        int actual = rad1.getVolume();
+        int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
 
