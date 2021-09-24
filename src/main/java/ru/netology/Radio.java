@@ -15,21 +15,24 @@ public class Radio {
     }
 
 
-
     public Radio() {
     }
 
     public void stationNext() {
-        if (radioStation == maxStation)
-        {radioStation = minStation;}
-        else {radioStation = radioStation + 1;}
+        if (radioStation == maxStation) {
+            radioStation = minStation;
+        } else {
+            radioStation = radioStation + 1;
+        }
         return;
     }
 
     public void stationPrev() {
-        if (radioStation == minStation)
-        {radioStation = maxStation;}
-        else {radioStation = radioStation - 1;}
+        if (radioStation == minStation) {
+            radioStation = maxStation;
+        } else {
+            radioStation = radioStation - 1;
+        }
         return;
     }
 
@@ -64,16 +67,20 @@ public class Radio {
     }
 
     public void volumePlus() {
-        if (volume == maxVolume)
-        {volume = maxVolume;}
-        else {volume = volume + 1;}
+        if (volume == maxVolume) {
+            volume = maxVolume;
+        } else {
+            volume = volume + 1;
+        }
         return;
     }
 
     public void volumeMinus() {
-        if (volume == minVolume)
-        {volume = minVolume;}
-        else {volume = volume - 1;}
+        if (volume == minVolume) {
+            volume = minVolume;
+        } else {
+            volume = volume - 1;
+        }
         return;
     }
 

@@ -9,7 +9,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioOldTest {
 
 
-
     Radio rad = new Radio();
 
     @Test
@@ -119,7 +118,6 @@ public class RadioOldTest {
         int actual = rad.getVolume();
         assertEquals(expected, actual);
     }
-
 
 
     @Test
