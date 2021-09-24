@@ -1,3 +1,5 @@
+package ru.netology;
+
 import org.junit.jupiter.api.Test;
 import ru.netology.Radio;
 
@@ -81,7 +83,7 @@ public class RadioTest {
     @Test
     void radioTestChoiceMax() {
 
-        rad1.setChoiceStation(5);
+        rad1.setChoiceStation(10);
 
         int expected = 0;
         int actual = rad1.getRadioStation();

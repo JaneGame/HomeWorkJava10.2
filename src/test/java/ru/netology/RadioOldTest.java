@@ -1,3 +1,5 @@
+package ru.netology;
+
 import org.junit.jupiter.api.Test;
 import ru.netology.Radio;
 
