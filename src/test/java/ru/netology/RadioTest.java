@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RadioTest {
 
 
-    Radio rad1 = new Radio(5);
+    Radio rad1 = new Radio();
 
     @Test
     void radioTestNext() {
@@ -26,7 +26,7 @@ public class RadioTest {
     void radioTestNextMax() {
 
 
-        rad1.setChoiceStation(5);
+        rad1.setChoiceStation(10);
 
         rad1.stationNext();
 
@@ -54,7 +54,7 @@ public class RadioTest {
 
         rad1.stationPrev();
 
-        int expected = 5;
+        int expected = 10;
         int actual = rad1.getRadioStation();
         assertEquals(expected, actual);
     }
@@ -82,7 +82,7 @@ public class RadioTest {
     @Test
     void radioTestChoiceMax() {
 
-        rad1.setChoiceStation(10);
+        rad1.setChoiceStation(11);
 
         int expected = 0;
         int actual = rad1.getRadioStation();
